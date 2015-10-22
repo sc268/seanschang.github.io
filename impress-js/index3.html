@@ -105,7 +105,7 @@
         It will not be rotated or scaled.
         
     -->
-<div id="bored" class="step slide" data-x="-1500" data-y="-1000.0"> </div>	
+<div id="bored" class="step slide" data-x="-2500" data-y="-1000.0"> </div>	
 
 
 <div id="bored" class="step slide" data-x="-2500" data-y="-1000.0"> </div>	
@@ -121,7 +121,7 @@
 </div>
 
 
-<div class="step slide list" data-x="-2500" data-y="0" data-rotate="0">
+<div class="step slide list" data-x="-2500" data-y="-200" data-rotate="0">
 	<t> <center> Outline </center> </t><br><br><q>
 			<details>
 				<summary>Introduction</summary>
@@ -164,7 +164,7 @@
 			<br></q>
 </div>
 
-<div   class="step" data-x="-2500" data-y="1000.0" data-rotate="0"> 
+<div   class="step" data-x="-2500" data-y="600.0" data-rotate="0"> 
 		
 			 <div id="pieChart" >
 			<svg>
@@ -380,19 +380,13 @@
 				</script>
 </div>
 
-<div class="step" data-x="-2500.0" data-y="1800.0" data-rotate="0" data-scale="1">
+<div class="step" data-x="-2500.0" data-y="1400.0" data-rotate="0" data-scale="1">
 		<strong>Procedure codes</strong> <br> <qq> Examinations /Patient symptoms</qq><br>
 </div>
 
 
-<div class="step slide" data-x="-500.0" data-y="1000.0" data-rotate="0">
-		<p align="left"><qq> Can we create a reliable <strong>health care fraud</strong> detection system
-		based on <strong> speciality classification </strong> and <strong>peer group comparison</strong>
-		?<br></p>
-	 </qq>
-</div>
 
-<div class="step slide list" data-x="-500.0" data-y="1800.0"  data-rotate="0">
+<div class="step slide list" data-x="-2500.0" data-y="2200.0"  data-rotate="0">
 	<center><t> Challenges </t><br>
 	</center>
 		<p align="left">
@@ -438,17 +432,91 @@
 			</ul>
 		</details>
 		<br>
+</div>			
+				
+	
+<div id="big" class="step banner" data-x="-1500" data-y="2200" data-scale="1">
+	  <b>specialities classification</p>
+	  
 </div>
 
-<div  class="step slide" data-x="-500" data-y="1800"  data-scale="1" >
+	<div class="step slide" data-x="-500.0" data-y="2200.0"  data-rotate="0">
+		Decision Tree 
+		<img src="plots/tree.png" alt="some_text" style="height:80%; width:100%">
+	</div>
+
+
+				
+				
+	<div class="step slide list"  data-x="500.0" data-y="2200.0"  data-rotate="0">
+		<center><strong> Random Forest </strong></center>
+		<q><br>
+		<details>
+				<summary>Methods</summary>
+				<ul>
+					 <li><a href="#">▪ Train each tree with bootstrapped data </a></li>
+					<li><a href="#">▪  For each split, only m randomly selected variables will be considered </a></li>
+					<li><a href="#">▪ Make votes to aggregate results from different trees</a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Motivation</summary>
+				<ul>
+					 <li><a href="#">▪ Bootstrapping and aggregating: reduce variance</a></li>
+					<li><a href="#">▪ Randomly choose variables: prevent overfitting  </a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Pros</summary>
+				<ul>
+					 <li><a href="#">▪ Accuracy </a></li>
+					<li><a href="#">▪ Lower variance</a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Cons</summary>
+				<ul>
+					 <li><a href="#">▪ Interpretation </a></li>
+					<li><a href="#">▪ Slower </a></li>
+				</ul>
+		</details><br>
+		</q>
+	</div>
+				
+				
+
+	<div  class="step slide" data-x="1500" data-y="2200" data-scale="1" >
+		Better predictive power <br> (misclassification rate 26% to 15%)
+    </div>
+	
+	<div  class="step slide" data-x="2500" data-y="2200" data-scale="1" >
+		Merge similiar groups <br> 
+        <p><img src="plots/heatmap_subset_merged.png" alt="some_text" style="height:70%; width:70%" >
+    </div>
+
+
+	<div  class="step slide" data-x="2500" data-y="1400"  data-scale="1" >
+		scalable
+        <p><img src="plots/heatmap_all.png" alt="some_text" style="height:70%; width:70%">
+    </div>
+	
+	<div  class="step slide" data-x="2500" data-y="600"  data-scale="1" >
 		Naive Bayes classification
 		<img src="plots/heatmap_all_naiveBayes.png" alt="some_text" style="height:90%; width:90%">
-</div>
+	</div>
 
-		
 	
 
-<div class="step slide" data-x="2000.0" data-y="1000.0" data-z="-300000" data-rotate="0"> 
+<div id="big2" class="step banner" data-x="2500" data-y="-200" data-scale="1">
+	  Fraud detection through reclassification.
+</div>
+
+
+	
+
+		
+
+<div class="step slide" data-x="2500" data-y="-1000.0" data-rotate="0"> 
     log billing of --- insurance providers
 	<div id="Chart" style="height:100%; width:100%;">
           <svg>
@@ -521,117 +589,15 @@
               return chart;
             });
         </script>
-</div>			
-	
-	
+</div>
 
-<div class="step slide" data-x="2000.0" data-y="2000.0" data-z="-300000" data-rotate="0"> 
+<div class="step slide" data-x="1500.0" data-y="-1000.0" data-rotate="0"> 
 	
 	<img src="plots/log_billingDialysis_Nephrology.png", alt = "some_text" style="width: 100%; height: 100%"/>
-</div>	
-	
-	
-	
-<div id="big" class="step banner" data-x="1500" data-y="1000" data-scale="1">
-	  <b>specialities classification</p>
-	  
-</div>
-
-	<div class="step slide" data-x="-1500.0" data-y="1200.0" data-z="-50000" data-rotate="0">
-		Decision Tree 
-		<img src="plots/tree.png" alt="some_text" style="height:80%; width:100%">
-	</div>
-
-
-	<div class="step" data-x="-1500.0" data-y="2200.0" data-z="-50000" data-rotate="0">
-		Predictions based on decision trees 
-		<img src="plots/xiaoping_classification.png" alt="some_text" style="height:90%; width:90%">
-	</div>
-				
-				
-	<div class="step" data-x="250.0" data-y="1200.0" data-z="-50000" data-rotate="0">
-		<img src="plots/yosemite.jpg" alt="some_text" style="height:100%; width:100%">
-	</div>
-
-	<div class="step slide list" data-x="250.0" data-y="2200.0" data-z="-50000" data-rotate="0">
-		<center><strong> Random Forest </strong></center>
-		<q><br>
-		<details>
-				<summary>Methods</summary>
-				<ul>
-					 <li><a href="#">▪ Train each tree with bootstrapped data </a></li>
-					<li><a href="#">▪  For each split, only m randomly selected variables will be considered </a></li>
-					<li><a href="#">▪ Make votes to aggregate results from different trees</a></li>
-				</ul>
-		</details><br>
-		<details>
-				<summary>Motivation</summary>
-				<ul>
-					 <li><a href="#">▪ Bootstrapping and aggregating: reduce variance</a></li>
-					<li><a href="#">▪ Randomly choose variables: prevent overfitting  </a></li>
-				</ul>
-		</details><br>
-		<details>
-				<summary>Pros</summary>
-				<ul>
-					 <li><a href="#">▪ Accuracy </a></li>
-					<li><a href="#">▪ Lower variance</a></li>
-				</ul>
-		</details><br>
-		<details>
-				<summary>Cons</summary>
-				<ul>
-					 <li><a href="#">▪ Interpretation </a></li>
-					<li><a href="#">▪ Slower </a></li>
-				</ul>
-		</details><br>
-		</q>
-	</div>
-				
-				
-
-	<div  class="step slide" data-x="2000" data-y="1200", data-z="-50000"  data-scale="1" >
-		Better predictive power <br> (misclassification rate 26% to 15%)
-    </div>
-	
-	<div  class="step slide" data-x="2000" data-y="2200", data-z="-50000"  data-scale="1" >
-		Merge similiar groups <br> 
-        <p><img src="plots/heatmap_subset_merged.png" alt="some_text" style="height:70%; width:70%" >
-    </div>
-
-
-	<div  class="step slide" data-x="2000" data-y="3200", data-z="-50000"  data-scale="1" >
-		Easily scalable to the whole dataset  <br>(10 specialities to 81; sample size from 1e3 to 2e4)
-        <p><img src="plots/heatmap_all.png" alt="some_text" style="height:70%; width:70%">
-    </div>
-	
-
-	
-
-<div id="big2" class="step banner" data-x="4000" data-y="1000" data-scale="1">
-	  Fraud detection through reclassification.
 </div>
 
 
-	
-
-		
-
-
-<div class="step slide" data-x="2000.0" data-y="3000.0" data-z="-300000" data-rotate="0"> 
-     Algorithms <br><br>
-	 <q><p align="left">
-	 1. For each speciality, compute its 95% percentile. <br>
-	 2. Use aforementioned random forest classification to reclassify each insurance provider.<br>
-	 3. Evaluate each provider's billing amount in new speciality. Report it if the amount exceeds the threshold.</p></q>
-</div>
-
-	
-<div class="step banner" data-x="1500" data-y="0" data-scale="1">
-	  Anomaly detection through other conditions
-</div>
-
-	<div  class="step" data-x="1500" data-y="-2000", data-z="-50000"  data-scale="1" >
+	<div  class="step" data-x="500" data-y="-1000" data-scale="1" >
         Find abnormal behaviour through PCA<br>
 		<img src="plots/PCA_emergency.png" alt="some_text">
 		<img src="plots/PCA_internal_medicine.png" alt="some_text">
@@ -640,30 +606,10 @@
     </div>
 	
 
-	<div class="step slide list" data-x="1500.0" data-y="-1000", data-z="-50000" data-rotate="0"> 
-		<center><t> Applications </t> </center><br><q>
-			<p align="left">
-			<details>
-					<summary>Speciality classification</summary>
-					<ul>
-						<li><a href="#">▪  The random Forest classifier improves the speciality classification accuracy and scalability. </a></li><br>
-						<li><a href="#">▪ Peer group comparision have more reliable thresholds for those providers whose reported and assigned specialties are same. </a></li><br>
-						<li><a href="#">▪ Applied to other conditions such as EEG (procedure code ---)to identify who billed EEG digital analysis more frequently or paid more than peers’ average. </a></li><br>
-					</ul>
-			</details><br>
-			<details>
-					<summary>Percentile comparison</summary>
-					<ul>
-						<li><a href="#">▪ Use 95% as the threshold, test on ---, the algorithm was able to identify 55 out of the 119 triggered providers from ---</a></li><br>
-						<li><a href="#">▪ In addition, 5 out of 57 triggered providers from --- </a></li>
-					</ul>
-			</details>
-					<br></q>
-		</P>
-	</div>
 
 
-<div class="step" data-x="4000.0" data-y="-1000.0" data-rotate="0"> 
+
+<div class="step" data-x="-300.0" data-y="-1000.0" data-rotate="0"> 
 	<div style="position:relative; width:424px; height:300px; float:left;">
 	<span style="position:absolute; top:0px; left:-100px;">
 	<img src="plots/twitter.png" />
@@ -678,7 +624,7 @@
 
 	
 
-	<div class="step slide list" data-x="4000.0" data-y="-1000.0" data-z="-50000" data-rotate="0"> 
+	<div class="step slide list" data-x="-500.0" data-y="-200.0"  data-rotate="0"> 
 	<center> <t> World Cup Tweets </t> </center><br>
 		<details>
 				<summary>Data</summary>
@@ -691,10 +637,7 @@
 		</details>
 		<br>
 		<details>
-				<summary>Question</summary>
-				<ul>
-				<li><a href="#">Amount above four teams, which one is the most popular? </a></li>
-				</ul>
+				<summary>Goals </summary>
 		</details>
 		<br>
 		<details>
@@ -702,39 +645,26 @@
 				<ul>
 					 <li><a href="#">▪ Sentiment analysis   </a></li>
 					<li><a href="#">▪ A dictionary having words with scores from -4 to +4</a></li>
-					<li><a href="#">▪ For each tweet, count its score</a></li>
-					<li><a href="#">▪ Quantify popularity from these scores</a></li>
 				</ul>
 		</details>
 	</div>
 	
-	<div class="step" data-x="4000.0" data-y="0" data-z="-50000" data-rotate="0"> 
+	<div class="step" data-x="-1500.0" data-y="-200" data-rotate="0"> 
 	<center> Positive vocabulary </center>	
 <svg width="700" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg"><g></g><g transform="translate(480,300)"><text text-anchor="middle" transform="translate(-19,-15)rotate(59.999999999999986)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">breathtaking</text><text text-anchor="middle" transform="translate(250,-10)rotate(-29.999999999999996)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">superb</text><text text-anchor="middle" transform="translate(-90,40)rotate(59.99999999999999)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">thrilled</text><text text-anchor="middle" transform="translate(132,-120)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">hurrah</text><text text-anchor="middle" transform="translate(277,90)rotate(-59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">cool</text><text text-anchor="middle" transform="translate(-292,-157)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">rotflol</text><text text-anchor="middle" transform="translate(-287,133)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">wowow</text><text text-anchor="middle" transform="translate(-309,-7)rotate(29.999999999999993)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">wins</text><text text-anchor="middle" transform="translate(321,144)rotate(-59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">wow</text><text text-anchor="middle" transform="translate(331,17)rotate(59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">rofl</text><text text-anchor="middle" transform="translate(136,-35)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">win</text><text text-anchor="middle" transform="translate(360,-119)rotate(59.99999999999999)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">lawl</text><text text-anchor="middle" transform="translate(-127,-141)rotate(-59.99999999999999)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">lol</text><text text-anchor="middle" transform="translate(368,181)rotate(29.999999999999996)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">ftw</text><text text-anchor="middle" transform="translate(151,127)rotate(59.99999999999999)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">cute</text><text text-anchor="middle" transform="translate(-395,-58)rotate(-59.99999999999999)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">avid</text><text text-anchor="middle" transform="translate(-212,-23)rotate(60)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">amazing</text><text text-anchor="middle" transform="translate(-158,172)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">wooo</text><text text-anchor="middle" transform="translate(38,-207)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">lmao</text><text text-anchor="middle" transform="translate(273,-214)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">miracle</text><text text-anchor="middle" transform="translate(-338,48)rotate(-60)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">fun</text><text text-anchor="middle" transform="translate(-82,230)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">adorable</text><text text-anchor="middle" transform="translate(-338,-245)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">super</text><text text-anchor="middle" transform="translate(-285,230)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">nice</text><text text-anchor="middle" transform="translate(236,251)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">sophisticated</text><text text-anchor="middle" transform="translate(-196,-237)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">care</text><text text-anchor="middle" transform="translate(-392,-186)rotate(-30)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">help</text><text text-anchor="middle" transform="translate(398,-18)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">oks</text><text text-anchor="middle" transform="translate(414,104)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">jolly</text><text text-anchor="middle" transform="translate(-411,229)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">like</text><text text-anchor="middle" transform="translate(414,245)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">hail</text><text text-anchor="middle" transform="translate(-316,-111)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">ha</text><text text-anchor="middle" transform="translate(94,-98)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">agrees</text><text text-anchor="middle" transform="translate(45,-98)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">prepared</text><text text-anchor="middle" transform="translate(57,-71)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">laughed</text><text text-anchor="middle" transform="translate(48,148)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">warm</text><text text-anchor="middle" transform="translate(-280,24)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">natural</text><text text-anchor="middle" transform="translate(-91,1)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">commits</text><text text-anchor="middle" transform="translate(190,38)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">forgive</text><text text-anchor="middle" transform="translate(-181,100)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">embrace</text><text text-anchor="middle" transform="translate(14,71)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">substantially</text><text text-anchor="middle" transform="translate(69,-105)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">backed</text><text text-anchor="middle" transform="translate(199,164)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">engages</text><text text-anchor="middle" transform="translate(-73,92)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">fame</text><text text-anchor="middle" transform="translate(-277,153)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">granted</text><text text-anchor="middle" transform="translate(-198,-166)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">promises</text><text text-anchor="middle" transform="translate(203,-80)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">sobering</text><text text-anchor="middle" transform="translate(-207,108)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">boosted</text><text text-anchor="middle" transform="translate(-280,41)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">wishing</text><text text-anchor="middle" transform="translate(-61,122)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">ardent</text><text text-anchor="middle" transform="translate(65,168)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">validate</text><text text-anchor="middle" transform="translate(166,72)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">promised</text><text text-anchor="middle" transform="translate(-56,-50)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">god</text><text text-anchor="middle" transform="translate(-305,45)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">greeted</text><text text-anchor="middle" transform="translate(227,28)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">solve</text><text text-anchor="middle" transform="translate(-94,58)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">enterprising</text><text text-anchor="middle" transform="translate(48,-196)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">achievable</text><text text-anchor="middle" transform="translate(-117,15)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">engage</text><text text-anchor="middle" transform="translate(-334,85)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">convinces</text><text text-anchor="middle" transform="translate(-17,-173)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">attracts</text><text text-anchor="middle" transform="translate(-237,-44)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">join</text><text text-anchor="middle" transform="translate(136,72)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">free</text><text text-anchor="middle" transform="translate(243,-99)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">convinced</text><text text-anchor="middle" transform="translate(193,-102)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">grace</text><text text-anchor="middle" transform="translate(-156,-49)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">relieves</text><text text-anchor="middle" transform="translate(-187,-107)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">compelled</text><text text-anchor="middle" transform="translate(75,-1)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">restores</text><text text-anchor="middle" transform="translate(57,180)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">reassured</text><text text-anchor="middle" transform="translate(-268,-80)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">intrigues</text><text text-anchor="middle" transform="translate(-324,66)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">accepted</text><text text-anchor="middle" transform="translate(309,8)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">motivation</text><text text-anchor="middle" transform="translate(27,166)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">yeah</text><text text-anchor="middle" transform="translate(-73,251)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">greeting</text><text text-anchor="middle" transform="translate(278,-8)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">greet</text><text text-anchor="middle" transform="translate(-402,5)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">restored</text><text text-anchor="middle" transform="translate(-219,-176)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">united</text><text text-anchor="middle" transform="translate(185,57)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">laughing</text><text text-anchor="middle" transform="translate(-443,-18)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">boosting</text><text text-anchor="middle" transform="translate(-260,-60)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">relieve</text><text text-anchor="middle" transform="translate(211,50)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">reach</text><text text-anchor="middle" transform="translate(210,80)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">stimulate</text><text text-anchor="middle" transform="translate(-335,-100)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">significant</text><text text-anchor="middle" transform="translate(281,-163)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">comedy</text><text text-anchor="middle" transform="translate(437,-60)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">accepting</text><text text-anchor="middle" transform="translate(-182,-170)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">active</text><text text-anchor="middle" transform="translate(-104,-134)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">legal</text><text text-anchor="middle" transform="translate(119,-108)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">prays</text><text text-anchor="middle" transform="translate(-210,11)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">allow</text><text text-anchor="middle" transform="translate(272,-189)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">restoring</text><text text-anchor="middle" transform="translate(-99,104)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">clear</text><text text-anchor="middle" transform="translate(-393,-24)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">boosts</text><text text-anchor="middle" transform="translate(-70,-73)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">yes</text><text text-anchor="middle" transform="translate(177,205)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">anticipation</text><text text-anchor="middle" transform="translate(195,-194)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">solutions</text><text text-anchor="middle" transform="translate(-53,157)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">shares</text><text text-anchor="middle" transform="translate(211,171)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">increase</text><text text-anchor="middle" transform="translate(139,-198)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">aboard</text><text text-anchor="middle" transform="translate(-194,-191)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">motivate</text><text text-anchor="middle" transform="translate(-433,31)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">adequate</text><text text-anchor="middle" transform="translate(108,-190)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">pretty</text><text text-anchor="middle" transform="translate(-426,47)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">explorations</text><text text-anchor="middle" transform="translate(-148,-260)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">legally</text><text text-anchor="middle" transform="translate(55,-269)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">forgiving</text><text text-anchor="middle" transform="translate(-272,173)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">advanced</text><text text-anchor="middle" transform="translate(282,-125)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">keen</text><text text-anchor="middle" transform="translate(215,199)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">reaches</text><text text-anchor="middle" transform="translate(-371,-22)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">jesus</text><text text-anchor="middle" transform="translate(73,221)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">reached</text><text text-anchor="middle" transform="translate(-2,-276)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">salient</text><text text-anchor="middle" transform="translate(220,-99)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">boost</text><text text-anchor="middle" transform="translate(321,182)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">solves</text><text text-anchor="middle" transform="translate(-146,250)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">adopts</text><text text-anchor="middle" transform="translate(312,-194)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">interests</text><text text-anchor="middle" transform="translate(105,-273)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">innovate</text><text text-anchor="middle" transform="translate(-391,107)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">solved</text><text text-anchor="middle" transform="translate(27,243)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">reassure</text><text text-anchor="middle" transform="translate(-438,-99)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">please</text><text text-anchor="middle" transform="translate(-31,244)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">innovates</text><text text-anchor="middle" transform="translate(-110,245)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">laughs</text><text text-anchor="middle" transform="translate(-432,-126)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">protected</text><text text-anchor="middle" transform="translate(-302,160)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">want</text><text text-anchor="middle" transform="translate(-434,82)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">decisive</text><text text-anchor="middle" transform="translate(-411,-161)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">clearly</text><text text-anchor="middle" transform="translate(-210,241)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">dreams</text><text text-anchor="middle" transform="translate(436,31)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">prospect</text><text text-anchor="middle" transform="translate(313,-157)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">prospects</text><text text-anchor="middle" transform="translate(334,49)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">jewels</text><text text-anchor="middle" transform="translate(377,-29)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">promote</text><text text-anchor="middle" transform="translate(-22,257)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">desire</text><text text-anchor="middle" transform="translate(436,-116)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">unmatched</text><text text-anchor="middle" transform="translate(308,-177)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">agree</text><text text-anchor="middle" transform="translate(80,245)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">cleared</text><text text-anchor="middle" transform="translate(-93,261)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">certain</text><text text-anchor="middle" transform="translate(-39,153)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">agreed</text><text text-anchor="middle" transform="translate(-398,30)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">attract</text><text text-anchor="middle" transform="translate(-231,247)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">shared</text><text text-anchor="middle" transform="translate(21,261)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">safety</text><text text-anchor="middle" transform="translate(-435,-73)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">adopt</text><text text-anchor="middle" transform="translate(-419,97)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">supporting</text><text text-anchor="middle" transform="translate(-176,250)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">bright</text><text text-anchor="middle" transform="translate(411,61)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">straight</text><text text-anchor="middle" transform="translate(-21,-197)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">fresh</text><text text-anchor="middle" transform="translate(424,-167)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">guarantee</text><text text-anchor="middle" transform="translate(65,270)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">substantial</text><text text-anchor="middle" transform="translate(430,-143)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">solution</text><text text-anchor="middle" transform="translate(-329,-219)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">wish</text><text text-anchor="middle" transform="translate(-441,-233)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">meditative</text><text text-anchor="middle" transform="translate(-34,272)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">yearning</text><text text-anchor="middle" transform="translate(184,110)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">fit</text><text text-anchor="middle" transform="translate(315,201)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">carefree</text><text text-anchor="middle" transform="translate(-388,120)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">launched</text><text text-anchor="middle" transform="translate(444,-41)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">extend</text><text text-anchor="middle" transform="translate(-426,131)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">stimulates</text><text text-anchor="middle" transform="translate(-263,247)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">grant</text><text text-anchor="middle" transform="translate(436,130)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">engrossed</text><text text-anchor="middle" transform="translate(-16,288)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">stimulated</text><text text-anchor="middle" transform="translate(-170,-109)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">safe</text><text text-anchor="middle" transform="translate(360,201)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">vitamin</text><text text-anchor="middle" transform="translate(-204,-228)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">supporter</text><text text-anchor="middle" transform="translate(-130,-277)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">protect</text><text text-anchor="middle" transform="translate(225,-204)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">matter</text><text text-anchor="middle" transform="translate(-420,-221)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">significance</text><text text-anchor="middle" transform="translate(448,-154)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">safely</text><text text-anchor="middle" transform="translate(124,275)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">haunting</text><text text-anchor="middle" transform="translate(-51,-287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">feeling</text><text text-anchor="middle" transform="translate(-297,248)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">lenient</text><text text-anchor="middle" transform="translate(39,265)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">laugh</text><text text-anchor="middle" transform="translate(445,-187)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">validating</text><text text-anchor="middle" transform="translate(-171,-282)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">ensuring</text><text text-anchor="middle" transform="translate(411,-182)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">accepts</text><text text-anchor="middle" transform="translate(373,-54)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">clears</text><text text-anchor="middle" transform="translate(-445,-255)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">promotes</text><text text-anchor="middle" transform="translate(172,92)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">trust</text><text text-anchor="middle" transform="translate(168,272)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">vision</text><text text-anchor="middle" transform="translate(431,-232)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">promoted</text><text text-anchor="middle" transform="translate(-332,177)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">ensure</text><text text-anchor="middle" transform="translate(351,-199)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">share</text><text text-anchor="middle" transform="translate(228,272)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">whimsical</text><text text-anchor="middle" transform="translate(281,267)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">promoting</text><text text-anchor="middle" transform="translate(441,-225)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">brightness</text><text text-anchor="middle" transform="translate(204,271)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">praying</text><text text-anchor="middle" transform="translate(279,-281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">diamond</text><text text-anchor="middle" transform="translate(418,-271)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">expand</text><text text-anchor="middle" transform="translate(-438,-145)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">commit</text><text text-anchor="middle" transform="translate(316,-68)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">restore</text><text text-anchor="middle" transform="translate(-204,266)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">interest</text><text text-anchor="middle" transform="translate(179,187)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">big</text><text text-anchor="middle" transform="translate(-330,242)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">growing</text><text text-anchor="middle" transform="translate(322,272)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">extends</text><text text-anchor="middle" transform="translate(265,279)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">matters</text><text text-anchor="middle" transform="translate(232,173)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">smart</text><text text-anchor="middle" transform="translate(-67,-249)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">easy</text><text text-anchor="middle" transform="translate(33,-280)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">increased</text><text text-anchor="middle" transform="translate(-125,267)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">accept</text><text text-anchor="middle" transform="translate(93,281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">protects</text><text text-anchor="middle" transform="translate(-373,-70)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">huge</text><text text-anchor="middle" transform="translate(-271,276)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">lighthearted</text><text text-anchor="middle" transform="translate(408,268)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">inviting</text><text text-anchor="middle" transform="translate(-373,262)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">committing</text><text text-anchor="middle" transform="translate(447,-18)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">spark</text><text text-anchor="middle" transform="translate(-446,127)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">curious</text><text text-anchor="middle" transform="translate(387,-202)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">fitness</text><text text-anchor="middle" transform="translate(-443,177)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">visioning</text><text text-anchor="middle" transform="translate(-79,272)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">entitled</text><text text-anchor="middle" transform="translate(-318,265)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">innovation</text><text text-anchor="middle" transform="translate(-447,16)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">wishes</text><text text-anchor="middle" transform="translate(445,-85)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">reaching</text><text text-anchor="middle" transform="translate(164,-281)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">intense</text><text text-anchor="middle" transform="translate(-369,207)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">visions</text><text text-anchor="middle" transform="translate(-175,85)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">faith</text><text text-anchor="middle" transform="translate(-237,-283)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">greets</text><text text-anchor="middle" transform="translate(-174,281)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">promise</text><text text-anchor="middle" transform="translate(-427,263)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">supporters</text><text text-anchor="middle" transform="translate(-126,287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">dream</text><text text-anchor="middle" transform="translate(446,61)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">grants</text><text text-anchor="middle" transform="translate(442,-282)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">committed</text><text text-anchor="middle" transform="translate(-399,250)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">invite</text><text text-anchor="middle" transform="translate(346,196)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">granting</text><text text-anchor="middle" transform="translate(231,-283)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">pray</text><text text-anchor="middle" transform="translate(-116,110)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">alive</text><text text-anchor="middle" transform="translate(-447,-268)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">solving</text><text text-anchor="middle" transform="translate(200,-289)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">capable</text><text text-anchor="middle" transform="translate(-227,277)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">validated</text><text text-anchor="middle" transform="translate(360,276)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">exploration</text><text text-anchor="middle" transform="translate(435,270)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">convince</text><text text-anchor="middle" transform="translate(-361,271)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">attracted</text><text text-anchor="middle" transform="translate(149,-291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">immune</text><text text-anchor="middle" transform="translate(236,291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">validates</text><text text-anchor="middle" transform="translate(-1,138)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);"></text><text text-anchor="middle" transform="translate(83,-290)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">reassures</text><text text-anchor="middle" transform="translate(437,-266)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">backs</text><text text-anchor="middle" transform="translate(-337,282)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">unified</text><text text-anchor="middle" transform="translate(339,-289)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">absorbed</text><text text-anchor="middle" transform="translate(-421,281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">spirit</text><text text-anchor="middle" transform="translate(294,291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">laughting</text><text text-anchor="middle" transform="translate(69,287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">jewel</text><text text-anchor="middle" transform="translate(-442,-111)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">vested</text></g></svg>
 	</div>
 	
 
-	<div class="step slide" data-x="4000.0" data-y="1000.0" data-z="-50000" data-rotate="0"> 
-	<center> Results </center>
-	</div>
-
-
 
 
 	
 
 
 	
-<div class="step slide list" data-x="500.0" data-y="-1000.0" data-rotate="0">
+<div class="step slide list" data-x="-1500.0" data-y="-1000.0" data-rotate="0">
 	<center><t> Future Work </t></center><br><q>
 				<details>
 				<summary>Speciality Classification</summary>
-				<ul>
-					<li><a href="#">▪ Well-defined specialities </a></li>
-					<li><a href="#">▪ Decision trees </a></li>
-					<li><a href="#">▪ Neural Network for better predictive power</a></li>
-
-				</ul>
 				</details>
 				<br>	
 				<details>
@@ -747,29 +677,9 @@
 				<br>
 				<details>
 					<summary>Fraud Detection</summary>
-					<ul>
-						<li><a href="#">▪ Tested on ---, different triggerd results can be compared with the referred providers of ---</a></li>
-						<li><a href="#">▪ Cross-validation </a></li>
-						<li><a href="#">▪ Real-time system: billing amount/ history/ prescription </a></li>
-						<li><a href="#">▪ Temporal trend</a></li>
-					</ul>
 				</details></q>
 </div>
 	
-<div class="step slide" data-x="-1000.0" data-y="-1000.0" data-rotate="0">
-
-<br>
-<q> Reference </q>
-<br> 
-<q>
-<p align="left">
-d3.js - Mike Bostock <br>
-impress.js - Bartek Szopka <br> 
-matplotlib - John Hunter <br>
-</p>
-</q>
-
-</div>
 	
 
 
