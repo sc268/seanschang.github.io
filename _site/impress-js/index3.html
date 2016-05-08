@@ -1,0 +1,903 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sean Chang's presentation</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+		<link href="css/nv.d3.css" rel="stylesheet" type="text/css">
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	
+
+	
+    <script src="js/d3.v2.js" type="text/javascript"></script>
+    <script src="js/nv.d3.js" type="text/javascript"> </script>
+	
+	<script src="js/d3.min.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/d3pie.min.js" type="text/javascript"></script>
+	
+	<style>
+		ul.a {list-style-type: circle;}
+        ul.b {list-style-type: square;}
+	</style>
+
+
+	
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+<div id="bored" class="step slide" data-x="-2500" data-y="-1000.0"> </div>	
+
+
+<div id="bored" class="step slide" data-x="-2500" data-y="-1000.0"> </div>	
+<div class="step slide" data-x="-2500" data-y="-1000.0"> 
+	    <qq><strong> Fraud detection system based on peer group comparison </strong></qq><br>
+		<p align="left">
+		<br> <strong> Sean Chang</strong>                          
+		<br> sean.chang@duke.edu
+		<br> Statistical Science
+		<br> Duke University
+		<br> July 2014</p>
+		
+</div>
+
+
+<div class="step slide list" data-x="-2500" data-y="-200" data-rotate="0">
+	<t> <center> Outline </center> </t><br><br><q>
+			<details>
+				<summary>Introduction</summary>
+				<ul>
+					 <li><a href="#">▪ Challenges</a></li>
+					<li><a href="#">▪ Previous work</a></li>
+				</ul>
+			</details>
+			<br> 
+			<details>
+				<summary>Speciality Classification</summary>
+				<ul>
+					<li><a href="#">▪ Random Forest</a></li>
+					<li><a href="#">▪ Results</a></li>
+				</ul>
+			</details>
+			<br>
+			<details>
+				<summary>Fraud Detection System</summary>
+				<ul>
+					<li><a href="#">▪ An Application of classification</a></li>
+					<li><a href="#">▪ Peer Group Comparison</a></li>
+				</ul>
+			</details>	
+			<br>
+			<details>
+				<summary>Side Project</summary>
+				<ul>
+					<li><a href="#">▪ Mining tweets</a></li>
+					<li><a href="#">▪ Results</a></li>
+				</ul>
+			</details>	
+			<br> 
+			<details>
+				<summary>Conclusions</summary>
+				<ul>
+					<li><a href="#">▪ Future Work</a></li>
+				</ul>
+			</details>	
+			<br></q>
+</div>
+
+<div   class="step" data-x="-2500" data-y="600.0" data-rotate="0"> 
+		
+			 <div id="pieChart" >
+			<svg>
+			</svg>
+			</div>
+				<script>
+				var pie = new d3pie("pieChart", {
+					"header": {
+						"title": {
+							"text": "Insurance Providers Specialities",
+							"fontSize": 32,
+							"font": "open sans"
+						},
+						"subtitle": {
+							"text": "Top 40 specialities",
+							"color": "#999999",
+							"fontSize": 24,
+							"font": "open sans"
+						},
+						"titleSubtitlePadding": 9
+					},
+					"footer": {
+						"color": "#999999",
+						"fontSize": 10,
+						"font": "open sans",
+						"location": "bottom-left"
+					},
+					"size": {
+						"canvasWidth": 800,
+						"canvasHeight": 600
+					},
+					"data": {
+						"sortOrder": "value-desc",
+						"content": [
+							{
+								"label": "",
+								"value": 2256,
+								"color": "#2484c1"
+							},
+							{
+								"label": "",
+								"value": 1875,
+								"color": "#0c6197"
+							},
+							{
+								"label": "",
+								"value": 1572,
+								"color": "#4daa4b"
+							},
+							{
+								"label": "",
+								"value": 1254,
+								"color": "#90c469"
+							},
+							{
+								"label": "",
+								"value": 1140,
+								"color": "#daca61"
+							},
+							{
+								"label": "",
+								"value": 1090,
+								"color": "#e4a14b"
+							},
+							{
+								"label": "",
+								"value": 997,
+								"color": "#e98125"
+							},
+							{
+								"label": "",
+								"value": 834,
+								"color": "#cb2121"
+							},
+							{
+								"label": "",
+								"value": 814,
+								"color": "#830909"
+							},
+							{
+								"label": "",
+								"value": 706,
+								"color": "#923e99"
+							},
+							{
+								"label": "",
+								"value": 662,
+								"color": "#ae83d5"
+							},
+							{
+								"label": "",
+								"value": 533,
+								"color": "#bf273e"
+							},
+							{
+								"label": "",
+								"value": 517,
+								"color": "#ce2aeb"
+							},
+							{
+								"label": "",
+								"value": 425,
+								"color": "#bca44a"
+							},
+							{
+								"label": "",
+								"value": 395,
+								"color": "#618d1b"
+							},
+							{
+								"label": "",
+								"value": 374,
+								"color": "#1ee67b"
+							},
+							{
+								"label": "",
+								"value": 349,
+								"color": "#b0ec44"
+							},
+							{
+								"label": "",
+								"value": 315,
+								"color": "#a4a0c9"
+							},
+							{
+								"label": "",
+								"value": 280,
+								"color": "#322849"
+							},
+							{
+								"label": "",
+								"value": 270,
+								"color": "#86f71a"
+							},
+							{
+								"label": "",
+								"value": 261,
+								"color": "#d1c87f"
+							},
+							{
+								"label": "",
+								"value": 190,
+								"color": "#7d9058"
+							},
+							{
+								"label": "",
+								"value": 166,
+								"color": "#44b9b0"
+							},
+							{
+								"label": "",
+								"value": 160,
+								"color": "#7c37c0"
+							},
+							{
+								"label": "",
+								"value": 160,
+								"color": "#cc9fb1"
+							},
+							{
+								"label": "",
+								"value": 154,
+								"color": "#e65414"
+							},
+							{
+								"label": "",
+								"value": 151,
+								"color": "#8b6834"
+							},
+							{
+								"label": "",
+								"value": 149,
+								"color": "#248838"
+							}
+						]
+					},
+					"labels": {
+						"outer": {
+							"pieDistance": 32
+						},
+						"inner": {
+							"hideWhenLessThanPercentage": 3
+						},
+						"mainLabel": {
+							"fontSize": 11
+						},
+						"percentage": {
+							"color": "#ffffff",
+							"decimalPlaces": 0
+						},
+						"value": {
+							"color": "#adadad",
+							"fontSize": 11
+						},
+						"lines": {
+							"enabled": true
+						}
+					},
+					"effects": {
+						"pullOutSegmentOnClick": {
+							"effect": "linear",
+							"speed": 400,
+							"size": 8
+						}
+					},
+					"misc": {
+						"gradient": {
+							"enabled": true,
+							"percentage": 100
+						}
+					}
+				});
+				</script>
+</div>
+
+<div class="step" data-x="-2500.0" data-y="1400.0" data-rotate="0" data-scale="1">
+		<strong>Procedure codes</strong> <br> <qq> Examinations /Patient symptoms</qq><br>
+</div>
+
+
+
+<div class="step slide list" data-x="-2500.0" data-y="2200.0"  data-rotate="0">
+	<center><t> Challenges </t><br>
+	</center>
+		<p align="left">
+		<details>
+				<summary>Hierarchy</summary>
+				<ul>
+					 <li><a href="#">▪ Hematology/Oncology</a></li>
+					<li><a href="#">▪ Hematology</a></li>
+					<li><a href="#">▪ Oncology</a></li>
+				</ul>
+		</details>
+		<br>
+		<details>
+				<summary>Ambiguity</summary>
+				<ul>
+					 <li><a href="#">▪ Internal medicine</a></li>
+					<li><a href="#">▪ General practice</a></li>
+					<li><a href="#">▪ Family practice</a></li>
+				</ul>
+		</details>
+		<br>
+		<details>
+			<summary>Overlapping</summary>
+			<ul>
+				 <li><a href="#">▪ Psychiatry</a></li>
+				<li><a href="#">▪ Addiction Medicine</a></li>
+				<li></li>
+				<li><a href="#">▪ Dialysis</a></li>
+				<li><a href="#">▪ Nephrology</a></li>
+			</ul>
+		</details>			
+		<br> 
+		<details>
+			<summary>Individual/ Organization </summary>
+			<ul>
+				<li><a href="#">▪ Hospital </a></li>
+				<li><a href="#">▪ Clinical Laboratory </a></li>
+				<li><a href="#">▪ Ambulatory Surgical Center</a></li>
+				<li><a href="#">▪ Urgent Care Center </a></li>
+				<li><a href="#">▪ MRI, Independent DX Testing Center</a></li>
+				<li><a href="#">▪ Home Health Agency</a></li>
+				<li><a href="#">▪ Public Health/ Welfare Clinic</a></li>
+			</ul>
+		</details>
+		<br>
+</div>			
+				
+	
+<div id="big" class="step banner" data-x="-1500" data-y="2200" data-scale="1">
+	  <b>specialities classification</p>
+	  
+</div>
+
+	<div class="step slide" data-x="-500.0" data-y="2200.0"  data-rotate="0">
+		Decision Tree 
+		<img src="plots/tree.png" alt="some_text" style="height:80%; width:100%">
+	</div>
+
+
+				
+				
+	<div class="step slide list"  data-x="500.0" data-y="2200.0"  data-rotate="0">
+		<center><strong> Random Forest </strong></center>
+		<q><br>
+		<details>
+				<summary>Methods</summary>
+				<ul>
+					 <li><a href="#">▪ Train each tree with bootstrapped data </a></li>
+					<li><a href="#">▪  For each split, only m randomly selected variables will be considered </a></li>
+					<li><a href="#">▪ Make votes to aggregate results from different trees</a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Motivation</summary>
+				<ul>
+					 <li><a href="#">▪ Bootstrapping and aggregating: reduce variance</a></li>
+					<li><a href="#">▪ Randomly choose variables: prevent overfitting  </a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Pros</summary>
+				<ul>
+					 <li><a href="#">▪ Accuracy </a></li>
+					<li><a href="#">▪ Lower variance</a></li>
+				</ul>
+		</details><br>
+		<details>
+				<summary>Cons</summary>
+				<ul>
+					 <li><a href="#">▪ Interpretation </a></li>
+					<li><a href="#">▪ Slower </a></li>
+				</ul>
+		</details><br>
+		</q>
+	</div>
+				
+				
+
+	<div  class="step slide" data-x="1500" data-y="2200" data-scale="1" >
+		Better predictive power <br> (misclassification rate 26% to 15%)
+    </div>
+	
+	<div  class="step slide" data-x="2500" data-y="2200" data-scale="1" >
+		Merge similiar groups <br> 
+        <p><img src="plots/heatmap_subset_merged.png" alt="some_text" style="height:70%; width:70%" >
+    </div>
+
+
+	<div  class="step slide" data-x="2500" data-y="1400"  data-scale="1" >
+		scalable
+        <p><img src="plots/heatmap_all.png" alt="some_text" style="height:70%; width:70%">
+    </div>
+	
+	<div  class="step slide" data-x="2500" data-y="600"  data-scale="1" >
+		Naive Bayes classification
+		<img src="plots/heatmap_all_naiveBayes.png" alt="some_text" style="height:90%; width:90%">
+	</div>
+
+	
+
+<div id="big2" class="step banner" data-x="2500" data-y="-200" data-scale="1">
+	  Fraud detection through reclassification.
+</div>
+
+
+	
+
+		
+
+<div class="step slide" data-x="2500" data-y="-1000.0" data-rotate="0"> 
+    log billing of --- insurance providers
+	<div id="Chart" style="height:100%; width:100%;">
+          <svg>
+          </svg>
+        </div>
+
+        <script type="text/javascript">
+        var data = [{"shape": "circle", "values": 
+					[
+					[1.6, 0.0029643689574427616],
+							[1.9, 0.0],
+							[2.2, 0.002964368957442759],
+							[2.5, 0.0014821844787213817],
+							[2.8, 0.0014821844787213817],
+							[3.1, 0.019268398223377933],
+							[3.4, 0.013339660308492415],
+							[3.7, 0.2386317010741425],
+							[4.0, 0.15414718578702369],
+							[4.3, 0.054840825712691124],
+							[4.6, 0.22973859420181347],
+							[4.9, 0.14080752547853129],
+							[5.2, 0.12005694277643193],
+							[5.5, 0.12450349621259571],
+							[5.8, 0.11264602038282501],
+							[6.1, 0.1378431565210885],
+							[6.4, 0.11116383590410363],
+							[6.7, 0.14821844787213817],
+							[7.0, 0.15266500130830188],
+							[7.3, 0.16452247713807339],
+							[7.6, 0.21788111837204313],
+							[7.9, 0.28754378887194726],
+							[8.2, 0.23122077868053556],
+							[8.5, 0.19564835119122242],
+							[8.8, 0.14228970995725265],
+							[9.1, 0.16748684609551615],
+							[9.4, 0.10523509798921811],
+							[9.7, 0.0385367964467557],
+							[10.0, 0.019268398223377961],
+							[10.3, 0.0074109223936069087]
+						],"key": "P.Sing"}];
+         var d3_colorset = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'];
+        
+        d3.scale.colorset = function() {
+        return d3.scale.ordinal().range(d3_colorset);
+        };  
+        nv.addGraph(function() { 
+
+              var chart = nv.models.multiBarChart()
+               .x(function(d) { return d[0] })
+               .y(function(d) { return d[1] })
+               .color(d3.scale.colorset().range());
+               
+                
+                chart.xAxis
+                .axisLabel('')
+                .tickFormat(d3.format(',r'));
+                
+
+                chart.yAxis
+                .tickFormat(d3.format(',.2f'))
+                .axisLabel('');
+
+              d3.select('#Chart svg')
+                  .datum(data)
+                .transition().duration(500)
+                  .call(chart);
+
+              //nv.utils.windowResize(chart.update);
+
+              return chart;
+            });
+        </script>
+</div>
+
+<div class="step slide" data-x="1500.0" data-y="-1000.0" data-rotate="0"> 
+	
+	<img src="plots/log_billingDialysis_Nephrology.png", alt = "some_text" style="width: 100%; height: 100%"/>
+</div>
+
+
+	<div  class="step" data-x="500" data-y="-1000" data-scale="1" >
+        Find abnormal behaviour through PCA<br>
+		<img src="plots/PCA_emergency.png" alt="some_text">
+		<img src="plots/PCA_internal_medicine.png" alt="some_text">
+		<img src="plots/PCA_pediatrician.png" alt="some_text">
+		<img src="plots/PCA_radiology.png" alt="some_text">
+    </div>
+	
+
+
+
+
+<div class="step" data-x="-300.0" data-y="-1000.0" data-rotate="0"> 
+	<div style="position:relative; width:424px; height:300px; float:left;">
+	<span style="position:absolute; top:0px; left:-100px;">
+	<img src="plots/twitter.png" />
+	</span>
+	<span style="position:absolute; top:-200px; left:0px;">
+	<img src="plots/worldcup.png" style="height:120%; width:120%;" />
+	</span>
+	</div>
+</div>
+
+	
+
+	
+
+	<div class="step slide list" data-x="-500.0" data-y="-200.0"  data-rotate="0"> 
+	<center> <t> World Cup Tweets </t> </center><br>
+		<details>
+				<summary>Data</summary>
+				<ul>
+					 <li><a href="#">▪ Tweets with #WorldCup, #WorldCup2014, #Brazil2014, #FIFA, #FIFA2014 </a></li>
+					<li><a href="#">▪  #GER, #USA, #ARG, #BRA</a></li>
+					<li><a href="#">▪ Thousands of tweets this week </a></li>
+					<li><a href="#">▪ Location/ time/ language, etc</a></li>
+				</ul>
+		</details>
+		<br>
+		<details>
+				<summary>Goals </summary>
+		</details>
+		<br>
+		<details>
+				<summary>Methodology</summary>
+				<ul>
+					 <li><a href="#">▪ Sentiment analysis   </a></li>
+					<li><a href="#">▪ A dictionary having words with scores from -4 to +4</a></li>
+				</ul>
+		</details>
+	</div>
+	
+	<div class="step" data-x="-1500.0" data-y="-200" data-rotate="0"> 
+	<center> Positive vocabulary </center>	
+<svg width="700" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg"><g></g><g transform="translate(480,300)"><text text-anchor="middle" transform="translate(-19,-15)rotate(59.999999999999986)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">breathtaking</text><text text-anchor="middle" transform="translate(250,-10)rotate(-29.999999999999996)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">superb</text><text text-anchor="middle" transform="translate(-90,40)rotate(59.99999999999999)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">thrilled</text><text text-anchor="middle" transform="translate(132,-120)" style="font-size: 100px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">hurrah</text><text text-anchor="middle" transform="translate(277,90)rotate(-59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">cool</text><text text-anchor="middle" transform="translate(-292,-157)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">rotflol</text><text text-anchor="middle" transform="translate(-287,133)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">wowow</text><text text-anchor="middle" transform="translate(-309,-7)rotate(29.999999999999993)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">wins</text><text text-anchor="middle" transform="translate(321,144)rotate(-59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">wow</text><text text-anchor="middle" transform="translate(331,17)rotate(59.99999999999999)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">rofl</text><text text-anchor="middle" transform="translate(136,-35)rotate(-29.999999999999996)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">win</text><text text-anchor="middle" transform="translate(360,-119)rotate(59.99999999999999)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">lawl</text><text text-anchor="middle" transform="translate(-127,-141)rotate(-59.99999999999999)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">lol</text><text text-anchor="middle" transform="translate(368,181)rotate(29.999999999999996)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">ftw</text><text text-anchor="middle" transform="translate(151,127)rotate(59.99999999999999)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">cute</text><text text-anchor="middle" transform="translate(-395,-58)rotate(-59.99999999999999)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">avid</text><text text-anchor="middle" transform="translate(-212,-23)rotate(60)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">amazing</text><text text-anchor="middle" transform="translate(-158,172)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">wooo</text><text text-anchor="middle" transform="translate(38,-207)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">lmao</text><text text-anchor="middle" transform="translate(273,-214)rotate(0)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">miracle</text><text text-anchor="middle" transform="translate(-338,48)rotate(-60)" style="font-size: 87px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">fun</text><text text-anchor="middle" transform="translate(-82,230)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">adorable</text><text text-anchor="middle" transform="translate(-338,-245)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">super</text><text text-anchor="middle" transform="translate(-285,230)rotate(0)" style="font-size: 71px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">nice</text><text text-anchor="middle" transform="translate(236,251)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">sophisticated</text><text text-anchor="middle" transform="translate(-196,-237)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">care</text><text text-anchor="middle" transform="translate(-392,-186)rotate(-30)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">help</text><text text-anchor="middle" transform="translate(398,-18)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">oks</text><text text-anchor="middle" transform="translate(414,104)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">jolly</text><text text-anchor="middle" transform="translate(-411,229)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">like</text><text text-anchor="middle" transform="translate(414,245)rotate(0)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">hail</text><text text-anchor="middle" transform="translate(-316,-111)rotate(60)" style="font-size: 48px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">ha</text><text text-anchor="middle" transform="translate(94,-98)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">agrees</text><text text-anchor="middle" transform="translate(45,-98)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">prepared</text><text text-anchor="middle" transform="translate(57,-71)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">laughed</text><text text-anchor="middle" transform="translate(48,148)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">warm</text><text text-anchor="middle" transform="translate(-280,24)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">natural</text><text text-anchor="middle" transform="translate(-91,1)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">commits</text><text text-anchor="middle" transform="translate(190,38)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">forgive</text><text text-anchor="middle" transform="translate(-181,100)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">embrace</text><text text-anchor="middle" transform="translate(14,71)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">substantially</text><text text-anchor="middle" transform="translate(69,-105)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">backed</text><text text-anchor="middle" transform="translate(199,164)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">engages</text><text text-anchor="middle" transform="translate(-73,92)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">fame</text><text text-anchor="middle" transform="translate(-277,153)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">granted</text><text text-anchor="middle" transform="translate(-198,-166)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">promises</text><text text-anchor="middle" transform="translate(203,-80)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">sobering</text><text text-anchor="middle" transform="translate(-207,108)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">boosted</text><text text-anchor="middle" transform="translate(-280,41)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">wishing</text><text text-anchor="middle" transform="translate(-61,122)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">ardent</text><text text-anchor="middle" transform="translate(65,168)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">validate</text><text text-anchor="middle" transform="translate(166,72)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">promised</text><text text-anchor="middle" transform="translate(-56,-50)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">god</text><text text-anchor="middle" transform="translate(-305,45)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">greeted</text><text text-anchor="middle" transform="translate(227,28)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">solve</text><text text-anchor="middle" transform="translate(-94,58)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">enterprising</text><text text-anchor="middle" transform="translate(48,-196)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">achievable</text><text text-anchor="middle" transform="translate(-117,15)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">engage</text><text text-anchor="middle" transform="translate(-334,85)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">convinces</text><text text-anchor="middle" transform="translate(-17,-173)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">attracts</text><text text-anchor="middle" transform="translate(-237,-44)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">join</text><text text-anchor="middle" transform="translate(136,72)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">free</text><text text-anchor="middle" transform="translate(243,-99)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">convinced</text><text text-anchor="middle" transform="translate(193,-102)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">grace</text><text text-anchor="middle" transform="translate(-156,-49)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">relieves</text><text text-anchor="middle" transform="translate(-187,-107)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">compelled</text><text text-anchor="middle" transform="translate(75,-1)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">restores</text><text text-anchor="middle" transform="translate(57,180)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">reassured</text><text text-anchor="middle" transform="translate(-268,-80)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">intrigues</text><text text-anchor="middle" transform="translate(-324,66)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">accepted</text><text text-anchor="middle" transform="translate(309,8)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">motivation</text><text text-anchor="middle" transform="translate(27,166)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">yeah</text><text text-anchor="middle" transform="translate(-73,251)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">greeting</text><text text-anchor="middle" transform="translate(278,-8)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">greet</text><text text-anchor="middle" transform="translate(-402,5)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">restored</text><text text-anchor="middle" transform="translate(-219,-176)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">united</text><text text-anchor="middle" transform="translate(185,57)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">laughing</text><text text-anchor="middle" transform="translate(-443,-18)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">boosting</text><text text-anchor="middle" transform="translate(-260,-60)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">relieve</text><text text-anchor="middle" transform="translate(211,50)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">reach</text><text text-anchor="middle" transform="translate(210,80)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">stimulate</text><text text-anchor="middle" transform="translate(-335,-100)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">significant</text><text text-anchor="middle" transform="translate(281,-163)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">comedy</text><text text-anchor="middle" transform="translate(437,-60)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">accepting</text><text text-anchor="middle" transform="translate(-182,-170)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">active</text><text text-anchor="middle" transform="translate(-104,-134)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">legal</text><text text-anchor="middle" transform="translate(119,-108)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">prays</text><text text-anchor="middle" transform="translate(-210,11)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">allow</text><text text-anchor="middle" transform="translate(272,-189)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">restoring</text><text text-anchor="middle" transform="translate(-99,104)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">clear</text><text text-anchor="middle" transform="translate(-393,-24)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">boosts</text><text text-anchor="middle" transform="translate(-70,-73)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">yes</text><text text-anchor="middle" transform="translate(177,205)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">anticipation</text><text text-anchor="middle" transform="translate(195,-194)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">solutions</text><text text-anchor="middle" transform="translate(-53,157)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">shares</text><text text-anchor="middle" transform="translate(211,171)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">increase</text><text text-anchor="middle" transform="translate(139,-198)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">aboard</text><text text-anchor="middle" transform="translate(-194,-191)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">motivate</text><text text-anchor="middle" transform="translate(-433,31)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">adequate</text><text text-anchor="middle" transform="translate(108,-190)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">pretty</text><text text-anchor="middle" transform="translate(-426,47)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">explorations</text><text text-anchor="middle" transform="translate(-148,-260)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">legally</text><text text-anchor="middle" transform="translate(55,-269)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">forgiving</text><text text-anchor="middle" transform="translate(-272,173)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">advanced</text><text text-anchor="middle" transform="translate(282,-125)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">keen</text><text text-anchor="middle" transform="translate(215,199)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">reaches</text><text text-anchor="middle" transform="translate(-371,-22)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">jesus</text><text text-anchor="middle" transform="translate(73,221)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">reached</text><text text-anchor="middle" transform="translate(-2,-276)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">salient</text><text text-anchor="middle" transform="translate(220,-99)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">boost</text><text text-anchor="middle" transform="translate(321,182)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">solves</text><text text-anchor="middle" transform="translate(-146,250)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">adopts</text><text text-anchor="middle" transform="translate(312,-194)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">interests</text><text text-anchor="middle" transform="translate(105,-273)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">innovate</text><text text-anchor="middle" transform="translate(-391,107)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">solved</text><text text-anchor="middle" transform="translate(27,243)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">reassure</text><text text-anchor="middle" transform="translate(-438,-99)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">please</text><text text-anchor="middle" transform="translate(-31,244)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">innovates</text><text text-anchor="middle" transform="translate(-110,245)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">laughs</text><text text-anchor="middle" transform="translate(-432,-126)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">protected</text><text text-anchor="middle" transform="translate(-302,160)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">want</text><text text-anchor="middle" transform="translate(-434,82)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">decisive</text><text text-anchor="middle" transform="translate(-411,-161)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">clearly</text><text text-anchor="middle" transform="translate(-210,241)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">dreams</text><text text-anchor="middle" transform="translate(436,31)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">prospect</text><text text-anchor="middle" transform="translate(313,-157)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">prospects</text><text text-anchor="middle" transform="translate(334,49)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">jewels</text><text text-anchor="middle" transform="translate(377,-29)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">promote</text><text text-anchor="middle" transform="translate(-22,257)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">desire</text><text text-anchor="middle" transform="translate(436,-116)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">unmatched</text><text text-anchor="middle" transform="translate(308,-177)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">agree</text><text text-anchor="middle" transform="translate(80,245)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">cleared</text><text text-anchor="middle" transform="translate(-93,261)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">certain</text><text text-anchor="middle" transform="translate(-39,153)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">agreed</text><text text-anchor="middle" transform="translate(-398,30)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">attract</text><text text-anchor="middle" transform="translate(-231,247)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">shared</text><text text-anchor="middle" transform="translate(21,261)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">safety</text><text text-anchor="middle" transform="translate(-435,-73)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">adopt</text><text text-anchor="middle" transform="translate(-419,97)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">supporting</text><text text-anchor="middle" transform="translate(-176,250)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">bright</text><text text-anchor="middle" transform="translate(411,61)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">straight</text><text text-anchor="middle" transform="translate(-21,-197)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">fresh</text><text text-anchor="middle" transform="translate(424,-167)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">guarantee</text><text text-anchor="middle" transform="translate(65,270)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">substantial</text><text text-anchor="middle" transform="translate(430,-143)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">solution</text><text text-anchor="middle" transform="translate(-329,-219)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">wish</text><text text-anchor="middle" transform="translate(-441,-233)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">meditative</text><text text-anchor="middle" transform="translate(-34,272)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">yearning</text><text text-anchor="middle" transform="translate(184,110)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">fit</text><text text-anchor="middle" transform="translate(315,201)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">carefree</text><text text-anchor="middle" transform="translate(-388,120)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">launched</text><text text-anchor="middle" transform="translate(444,-41)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">extend</text><text text-anchor="middle" transform="translate(-426,131)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">stimulates</text><text text-anchor="middle" transform="translate(-263,247)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">grant</text><text text-anchor="middle" transform="translate(436,130)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">engrossed</text><text text-anchor="middle" transform="translate(-16,288)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">stimulated</text><text text-anchor="middle" transform="translate(-170,-109)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">safe</text><text text-anchor="middle" transform="translate(360,201)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">vitamin</text><text text-anchor="middle" transform="translate(-204,-228)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">supporter</text><text text-anchor="middle" transform="translate(-130,-277)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">protect</text><text text-anchor="middle" transform="translate(225,-204)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">matter</text><text text-anchor="middle" transform="translate(-420,-221)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">significance</text><text text-anchor="middle" transform="translate(448,-154)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">safely</text><text text-anchor="middle" transform="translate(124,275)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">haunting</text><text text-anchor="middle" transform="translate(-51,-287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">feeling</text><text text-anchor="middle" transform="translate(-297,248)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">lenient</text><text text-anchor="middle" transform="translate(39,265)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">laugh</text><text text-anchor="middle" transform="translate(445,-187)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">validating</text><text text-anchor="middle" transform="translate(-171,-282)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">ensuring</text><text text-anchor="middle" transform="translate(411,-182)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">accepts</text><text text-anchor="middle" transform="translate(373,-54)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">clears</text><text text-anchor="middle" transform="translate(-445,-255)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">promotes</text><text text-anchor="middle" transform="translate(172,92)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">trust</text><text text-anchor="middle" transform="translate(168,272)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">vision</text><text text-anchor="middle" transform="translate(431,-232)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">promoted</text><text text-anchor="middle" transform="translate(-332,177)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">ensure</text><text text-anchor="middle" transform="translate(351,-199)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">share</text><text text-anchor="middle" transform="translate(228,272)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">whimsical</text><text text-anchor="middle" transform="translate(281,267)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">promoting</text><text text-anchor="middle" transform="translate(441,-225)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">brightness</text><text text-anchor="middle" transform="translate(204,271)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">praying</text><text text-anchor="middle" transform="translate(279,-281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">diamond</text><text text-anchor="middle" transform="translate(418,-271)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">expand</text><text text-anchor="middle" transform="translate(-438,-145)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">commit</text><text text-anchor="middle" transform="translate(316,-68)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">restore</text><text text-anchor="middle" transform="translate(-204,266)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">interest</text><text text-anchor="middle" transform="translate(179,187)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">big</text><text text-anchor="middle" transform="translate(-330,242)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">growing</text><text text-anchor="middle" transform="translate(322,272)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">extends</text><text text-anchor="middle" transform="translate(265,279)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">matters</text><text text-anchor="middle" transform="translate(232,173)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">smart</text><text text-anchor="middle" transform="translate(-67,-249)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">easy</text><text text-anchor="middle" transform="translate(33,-280)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">increased</text><text text-anchor="middle" transform="translate(-125,267)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">accept</text><text text-anchor="middle" transform="translate(93,281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">protects</text><text text-anchor="middle" transform="translate(-373,-70)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">huge</text><text text-anchor="middle" transform="translate(-271,276)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">lighthearted</text><text text-anchor="middle" transform="translate(408,268)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">inviting</text><text text-anchor="middle" transform="translate(-373,262)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">committing</text><text text-anchor="middle" transform="translate(447,-18)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">spark</text><text text-anchor="middle" transform="translate(-446,127)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">curious</text><text text-anchor="middle" transform="translate(387,-202)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">fitness</text><text text-anchor="middle" transform="translate(-443,177)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">visioning</text><text text-anchor="middle" transform="translate(-79,272)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">entitled</text><text text-anchor="middle" transform="translate(-318,265)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">innovation</text><text text-anchor="middle" transform="translate(-447,16)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">wishes</text><text text-anchor="middle" transform="translate(445,-85)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">reaching</text><text text-anchor="middle" transform="translate(164,-281)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">intense</text><text text-anchor="middle" transform="translate(-369,207)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);">visions</text><text text-anchor="middle" transform="translate(-175,85)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">faith</text><text text-anchor="middle" transform="translate(-237,-283)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">greets</text><text text-anchor="middle" transform="translate(-174,281)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">promise</text><text text-anchor="middle" transform="translate(-427,263)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">supporters</text><text text-anchor="middle" transform="translate(-126,287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">dream</text><text text-anchor="middle" transform="translate(446,61)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">grants</text><text text-anchor="middle" transform="translate(442,-282)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">committed</text><text text-anchor="middle" transform="translate(-399,250)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">invite</text><text text-anchor="middle" transform="translate(346,196)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(222, 158, 214);">granting</text><text text-anchor="middle" transform="translate(231,-283)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(57, 59, 121);">pray</text><text text-anchor="middle" transform="translate(-116,110)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(82, 84, 163);">alive</text><text text-anchor="middle" transform="translate(-447,-268)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(107, 110, 207);">solving</text><text text-anchor="middle" transform="translate(200,-289)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(156, 158, 222);">capable</text><text text-anchor="middle" transform="translate(-227,277)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(99, 121, 57);">validated</text><text text-anchor="middle" transform="translate(360,276)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 162, 82);">exploration</text><text text-anchor="middle" transform="translate(435,270)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(181, 207, 107);">convince</text><text text-anchor="middle" transform="translate(-361,271)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 219, 156);">attracted</text><text text-anchor="middle" transform="translate(149,-291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(140, 109, 49);">immune</text><text text-anchor="middle" transform="translate(236,291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(189, 158, 57);">validates</text><text text-anchor="middle" transform="translate(-1,138)rotate(-60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 186, 82);"></text><text text-anchor="middle" transform="translate(83,-290)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 203, 148);">reassures</text><text text-anchor="middle" transform="translate(437,-266)rotate(60)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(132, 60, 57);">backs</text><text text-anchor="middle" transform="translate(-337,282)rotate(-30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(173, 73, 74);">unified</text><text text-anchor="middle" transform="translate(339,-289)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(214, 97, 107);">absorbed</text><text text-anchor="middle" transform="translate(-421,281)rotate(30)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(231, 150, 156);">spirit</text><text text-anchor="middle" transform="translate(294,291)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(123, 65, 115);">laughting</text><text text-anchor="middle" transform="translate(69,287)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(165, 81, 148);">jewel</text><text text-anchor="middle" transform="translate(-442,-111)rotate(0)" style="font-size: 10px; opacity: 1; font-family: Impact; fill: rgb(206, 109, 189);">vested</text></g></svg>
+	</div>
+	
+
+
+
+	
+
+
+	
+<div class="step slide list" data-x="-1500.0" data-y="-1000.0" data-rotate="0">
+	<center><t> Future Work </t></center><br><q>
+				<details>
+				<summary>Speciality Classification</summary>
+				</details>
+				<br>	
+				<details>
+					<summary>Twitter Text Mining</summary>
+					<ul>
+						<li><a href="#">▪ Español? Deutsch? Français?</a></li>
+						<li><a href="#">▪ Temporal/spatial trends </a></li>
+					</ul>
+				</details>	
+				<br>
+				<details>
+					<summary>Fraud Detection</summary>
+				</details></q>
+</div>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+	
+  
+
+
+	
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+		
+
+	
+	
+
+    <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+        
+    -->
+
+
+    <!--
+        
+        This element introduces rotation.
+        
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+        
+    -->
+	
+	
+    <!--
+        
+        And now it gets really exciting! We move into third dimension!
+        
+        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+        positioned far away from us (by 3000px).
+		
+		Wow, that's a brilliant idea! - Sean
+        
+    -->
+   
+    <!--
+        
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+    -->
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="10">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
